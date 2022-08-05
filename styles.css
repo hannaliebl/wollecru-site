@@ -129,11 +129,47 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title-text-container {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 .text-container {
   max-width: 960px;
+  margin: 0 auto;
 }
 
 .page-header {
-  background: url('/img/wollecru-sheep.jpg');
+  background: url('/img/wollecru-sheep.jpg') no-repeat center;
+  background-position: center center;
+  background-size: cover;
+  min-height: 700px;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'El Messiri', sans-serif;
+}
+
+.title-subheading {
+  font-size: 25px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgb(166, 166, 166);
+}
+
+.title-subheading-small {
+  font-style: italic;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px rgb(166, 166, 166);
+  padding-top: 10px;
+}
+
+h1 {
+  font-size: 85px;
+  padding-top: 200px;
 }
 
