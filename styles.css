@@ -131,24 +131,48 @@ table {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: rgb(11, 11, 11);
+}
+
+section {
+  margin: 40px 0;
 }
 
 .title-text-container {
   max-width: 550px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .text-container {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-container a {
+  color: rgb(11, 11, 11);
+}
+
+.text-color a:visited {
+  color: rgb(11, 11, 11);
 }
 
 .page-header {
   background: url('/img/wollecru-sheep.jpg') no-repeat center;
-  background-position: center center;
+  background-position: 5% center;
   background-size: cover;
   min-height: 700px;
   text-align: center;
+}
+
+.wool-header {
+    background: url('/img/wool-sheep.jpg') no-repeat center;
+      background-position: 5% center;
+      background-size: cover;
+      min-height: 700px;
+      text-align: center;
 }
 
 h1, h2 {
@@ -158,18 +182,97 @@ h1, h2 {
 .title-subheading {
   font-size: 25px;
   font-style: italic;
-  text-shadow: 1px 1px 1px rgb(166, 166, 166);
+  text-shadow: 1px 1px 3px rgb(227, 227, 227);
+  margin: 0;
 }
 
 .title-subheading-small {
   font-style: italic;
   font-size: 18px;
-  text-shadow: 1px 1px 1px rgb(166, 166, 166);
+  text-shadow: 1px 1px 3px rgb(227, 227, 227);
   padding-top: 10px;
+  margin: 0;
 }
 
-h1 {
+.page-title {
   font-size: 85px;
-  padding-top: 200px;
+  padding-top: 50px;
 }
+
+nav ul {
+  margin-top: 380px;
+  padding: 0 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border: 2px solid rgb(11, 11, 11);
+}
+
+nav li {
+  font-size: 23px;
+  padding: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: rgb(11, 11, 11);
+}
+
+@media (max-width: 660px)  {
+  .page-header {
+    min-height: 500px;
+  }
+  nav ul {
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+  margin: 30px 0;
+}
+
+.section-title {
+  font-size: 100px;
+  color: white;
+  text-align: right;
+  padding-top: 90px;
+}
+
+p {
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-container-expanded {
+  text-align: center;
+  margin: 0 -130px;
+}
+
+@media (max-width: 1225px) {
+  .content-container-expanded {
+      margin: 0;
+    }
+}
+
+.side-by-side-img-row {
+  display: flex;
+}
+
+.side-by-side-img-container {
+  display: flex;
+}
+
+.side-by-side-img-row > img {
+  display: flex;
+}
+
 
