@@ -168,11 +168,31 @@ section {
 }
 
 .wool-header {
-    background: url('/img/wool-sheep.jpg') no-repeat center;
-      background-position: 5% center;
-      background-size: cover;
-      min-height: 700px;
-      text-align: center;
+  background: url('/img/wool-sheep.jpg') no-repeat center;
+  background-position: 5% center;
+  background-size: cover;
+  min-height: 700px;
+  text-align: center;
+}
+
+.flora-header {
+  background: url('/img/flora-header.jpg') no-repeat center;
+  background-position: center center;
+  background-size: cover;
+  min-height: 700px;
+  text-align: center;
+}
+
+.wine-header {
+  background: url('/img/wine-header.jpg') no-repeat center;
+  background-position: 5% center;
+  background-size: cover;
+  min-height: 700px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 h1, h2 {
@@ -239,6 +259,17 @@ h2 {
   color: white;
   text-align: right;
   padding-top: 90px;
+}
+
+.section-title-left {
+  font-size: 100px;
+  color: white;
+  text-align: left;
+  padding-top: 90px;
+}
+
+.mod-grey-header {
+  color: rgb(11, 11, 11);
 }
 
 p {
