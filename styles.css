@@ -104,6 +104,7 @@ section {
 
 body {
   line-height: 1;
+  background: #cfc8a0;
 }
 
 ol,
@@ -130,7 +131,7 @@ table {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 20px;
   color: rgb(11, 11, 11);
 }
@@ -163,8 +164,12 @@ section {
   background: url('/img/wollecru-sheep.jpg') no-repeat center;
   background-position: 5% center;
   background-size: cover;
-  min-height: 700px;
+  min-height: 900px;
   text-align: center;
+}
+
+.section-header {
+  margin: 60px 0;
 }
 
 .wool-header {
@@ -185,6 +190,14 @@ section {
 
 .wine-header {
   background: url('/img/wine-header.jpg') no-repeat center;
+  background-position: 5% center;
+  background-size: cover;
+  min-height: 700px;
+  text-align: center;
+}
+
+.contact-header {
+  background: url('/img/kirsten-and-sheep.jpg') no-repeat center;
   background-position: 5% center;
   background-size: cover;
   min-height: 700px;
@@ -224,12 +237,12 @@ h1, h2 {
 }
 
 nav ul {
-  margin-top: 380px;
+  margin-top: 550px;
   padding: 0 20px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  background: #fff;
+  background: #cfc8a0;
   border: 2px solid rgb(11, 11, 11);
 }
 
@@ -255,7 +268,11 @@ nav li a {
 
 h2 {
   font-size: 34px;
-  margin: 30px 0;
+  margin: 40px 0 20px 0;
+}
+
+.text-section {
+  margin-bottom: 60px;
 }
 
 .section-title {
@@ -263,6 +280,10 @@ h2 {
   color: white;
   text-align: right;
   padding-top: 90px;
+}
+
+.section-title-mod-contact {
+  padding-top: 30px;
 }
 
 .section-title-left {
