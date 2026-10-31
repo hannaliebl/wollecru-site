@@ -1,6 +1,10 @@
 {
   "title": "contact",
-  "address": "Kirsten Liebl and Taylor LaFleur\n342 NYS Route 22\nWestport, NY 12993",
+  "names": "Kirsten Liebl and Taylor LaFleur",
+  "street": "342 NYS Route 22",
+  "city": "Westport",
+  "state": "NY",
+  "zip": "12993",
   "instagram": "kirstenliebl",
   "newsletter_text": "Sign up for our seasonal newsletter below to hear news from the farm as well as first look at products for sale, and meat availability.",
   "newsletter_embed": "https://wollecru.substack.com/embed",

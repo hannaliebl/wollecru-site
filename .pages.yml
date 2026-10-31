@@ -40,9 +40,16 @@ content:
         type: text
       - name: title
         label: Browser tab and search title
-        description: Shown in the browser tab and as the headline in Google results.
+        description: Shown in the browser tab and as the headline in Google results. Keep it under 60 characters or Google cuts it off.
+        type: string
+        required: true
+        options: { maxlength: 70 }
+      - name: description
+        label: Search description
+        description: The summary under the title in Google results and in link previews. One or two sentences, under 160 characters.
         type: text
         required: true
+        options: { maxlength: 200 }
       - name: shop_url
         label: Online store link
         description: Used for "Shop" in the menu.
@@ -164,10 +171,26 @@ content:
         label: Big title on the photo
         type: string
         required: true
-      - name: address
-        label: Names and address
-        description: Press Enter for each new line.
-        type: text
+      - name: names
+        label: Names
+        type: string
+      # The address is also given to Google as the farm's location.
+      - name: street
+        label: Street address
+        type: string
+        required: true
+      - name: city
+        label: Town
+        type: string
+        required: true
+      - name: state
+        label: State
+        type: string
+        required: true
+      - name: zip
+        label: ZIP code
+        type: string
+        required: true
       - name: instagram
         label: Instagram handle
         description: Without the @, e.g. kirstenliebl. Leave empty to hide.
