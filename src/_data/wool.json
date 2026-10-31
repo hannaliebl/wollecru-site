@@ -5,33 +5,80 @@
       "heading": "The Flock",
       "text": "Our current sheep flock is mixed breed, as we are always striving for a balance of beautiful wool, strong mothers, and high quality meat. It consists mostly of Romney, Finn, and Border Leicester genetics. In an intensive rotational grazing system, we view the sheep as a tool to stimulate life in our soils through their “pruning” of the pasture plants, dropping their biologically active rumen-digested manure, and hoof action returning organic matter back into the soil. They graze open fields of grasses, legumes, and herbs used for fresh pasture and winter hay, as well as bordering scrub that is dotted with buckthorn, barberry and bittersweet. The sheep devour these dominating shrubs as we cut down branches for them. After a few years of grazing, these invasive species die back. In their place, we are planting more non-invasive, palatable, and nutritious trees and shrubs to be both shade during hot spells and to provide a diverse diet for the sheep. So far this consists of willows, mulberry, poplar, and honey locust.\n\nLiving amongst the sheep are two guardian donkeys that protect the flock from the wild animals that populate the land, allowing foxes, coyotes, and bears to be respected rather than persecuted by our farming.\n",
       "photos": [
-        { "image": "/img/flock1.jpg", "alt": "" },
-        { "image": "/img/flock2.jpg", "alt": "" },
-        { "image": "/img/flock3.jpg", "alt": "" },
-        { "image": "/img/flock4.jpg", "alt": "" },
-        { "image": "/img/flock5.jpg", "alt": "" },
-        { "image": "/img/flock6.jpg", "alt": "" }
+        {
+          "image": "/img/flock1.jpg",
+          "alt": "Two guardian donkeys grazing in a green pasture"
+        },
+        {
+          "image": "/img/flock2.jpg",
+          "alt": "White and black lambs running and leaping in a straw-bedded barn"
+        },
+        {
+          "image": "/img/flock3.jpg",
+          "alt": "Mixed-breed sheep grazing in a meadow at sunset"
+        },
+        {
+          "image": "/img/flock4.jpg",
+          "alt": "Two dark-wooled sheep looking through the rails of a gate in the barn"
+        },
+        {
+          "image": "/img/flock5.jpg",
+          "alt": "A guardian donkey watching over the flock in the evening sun"
+        },
+        {
+          "image": "/img/flock6.jpg",
+          "alt": "A freshly shorn, creamy white fleece laid out on a wooden table"
+        }
       ]
     },
     {
       "heading": "Wool and Weaving",
       "text": "In the spring, a few weeks before lambing, the sheep are shorn. The wool is sorted by color, processed at a nearby fiber mill, and returned to us in large cones of yarn for weaving. This yarn is either left in its natural colors or dyed using plants that grow on and around the farm. These natural dyes result in rich colors that are reminiscent of the landscape. By experimenting over the years with natural dyes, we discovered which plants grow well in our area and what colors remain vibrant and colorfast for years. Once we have a palate of the season’s colors, the yarn is woven into blankets that are both visually stunning and utilitarian. We carry a limited amount of mill and hand spun knitting yarn each season. These products can be found for sale in our [online store](https://wollecru.square.site/) or at local markets.\n",
       "photos": [
-        { "image": "/img/woolweaving1.jpg", "alt": "" },
-        { "image": "/img/woolweaving2.jpg", "alt": "" },
-        { "image": "/img/woolweaving3.jpg", "alt": "" },
-        { "image": "/img/woolweaving4.jpg", "alt": "" },
-        { "image": "/img/woolweaving5.jpg", "alt": "", "align_left": true },
-        { "image": "/img/woolweaving6.jpg", "alt": "", "align_left": true },
-        { "image": "/img/woolweaving7.jpg", "alt": "" }
+        {
+          "image": "/img/woolweaving1.jpg",
+          "alt": "The flock gathered in a pen before shearing"
+        },
+        {
+          "image": "/img/woolweaving2.jpg",
+          "alt": "Hands passing a shuttle through a brown and cream plaid blanket on the loom"
+        },
+        {
+          "image": "/img/woolweaving3.jpg",
+          "alt": "Skeins of hand-spun yarn naturally dyed a soft green"
+        },
+        {
+          "image": "/img/woolweaving4.jpg",
+          "alt": "Three cones of naturally dyed wool yarn on a wooden table"
+        },
+        {
+          "image": "/img/woolweaving5.jpg",
+          "alt": "A weaver working at a wooden floor loom with a cat curled in her lap",
+          "align_left": true
+        },
+        {
+          "image": "/img/woolweaving6.jpg",
+          "alt": "A handwoven plaid wool blanket hanging on a line in front of a red barn",
+          "align_left": true
+        },
+        {
+          "image": "/img/woolweaving7.jpg",
+          "alt": "Close-up of a woven wool blanket in plaid shades of brown, gold, and cream"
+        }
       ]
     },
     {
       "heading": "Meat and Sheepskins",
       "text": "Each winter we harvest lambs for meat, and sell them as whole or half animals in butchered cuts. This is the most economical option for ourselves and customers to have high quality and healthy protein in their freezers. If you are interested in purchasing a meat share, we take deposits starting in the spring through our [online store](https://wollecru.square.site/), or if you would prefer to pay by cash or check email us at [wollecru@gmail.com](mailto:wollecru@gmail.com). We also have individual lamb cuts available for sale at farmers markets and on our [online store](https://wollecru.square.site/) for local pickup.\n\nThe livestock we process for meat, also provide the gift of a sheepskin pelt. These are carefully prepared during animal harvest, so that no holes are cut into the skin. Then they are salt cured for a few months before being tanned. Some skins we bring to a natural tannery to be bark tanned, and some skins we process ourselves here at Wollecru using a traditional fat tanning and smoking method. At any one point we have a variety of skins in stock, in different colors and lengths. Our [online store](https://wollecru.square.site/) is always kept up to date with our current inventory. These naturally tanned skins are definitely safe for babies (and adults!) to curl up on, as neither the fat or bark tanning methods use any heavy metals during the process.\n",
       "photos": [
-        { "image": "/img/meatsheepskins1.jpg", "alt": "" },
-        { "image": "/img/meatsheepskins2.jpg", "alt": "" }
+        {
+          "image": "/img/meatsheepskins1.jpg",
+          "alt": "A woman on a farmhouse porch holding up a long, white tanned sheepskin"
+        },
+        {
+          "image": "/img/meatsheepskins2.jpg",
+          "alt": "A sheepskin stretched on a wooden frame to dry under a tree, with the flock grazing beyond"
+        }
       ]
     }
   ]
