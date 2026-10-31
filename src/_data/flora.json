@@ -5,20 +5,44 @@
       "heading": "Gardens",
       "text": "Our perennial gardens are always expanding as we trial different plants that grow well in our Zone 4 region. Each season is a new experiment with form, texture, color and rhythm to design emotionally impactful gardens that are maintained with minimal fuss and absolutely no pesticides, fungicides, herbicides or chemical fertilizers. While we garden because we love what it adds to our lives, it is also a great way to inspire our customers by showcasing the plants that we grow for sale in our nursery.\n",
       "photos": [
-        { "image": "/img/flowers-bricks.jpeg", "alt": "" },
-        { "image": "/img/gardens1.jpg", "alt": "" },
-        { "image": "/img/gardens2.jpg", "alt": "" },
-        { "image": "/img/gardens3.jpg", "alt": "" }
+        {
+          "image": "/img/flowers-bricks.jpeg",
+          "alt": "Lamb's ear, nasturtiums, and other plants growing among old bricks and pavers"
+        },
+        {
+          "image": "/img/gardens1.jpg",
+          "alt": "A lush perennial garden with yellow flowers in late summer light"
+        },
+        {
+          "image": "/img/gardens2.jpg",
+          "alt": "Garden beds glowing in autumn evening light, with a small table and chairs"
+        },
+        {
+          "image": "/img/gardens3.jpg",
+          "alt": "A black dog standing on a gravel path in a perennial garden"
+        }
       ]
     },
     {
       "heading": "Nursery",
       "text": "Wollecru has a seasonal nursery selling high quality annual vegetable and flower starts each spring. We also propagate our favorite garden perennials and sell them on open days in the spring, as well as by appointment throughout the growing season. All the plants are grown in living soil using compost based potting soil, or a blend of our own composted sheep manure, local sand, and garden soil.\n\nWe also provide contract growing each spring for professional gardeners as well as passionate home gardeners. If you are interested in sourcing locally grown plants for a project, or have any questions about how to get started with your garden adventures, please get in touch at [wollecru@gmail.com](mailto:wollecru@gmail.com)\n",
       "photos": [
-        { "image": "/img/nursery1.jpg", "alt": "" },
-        { "image": "/img/nursery2.jpg", "alt": "" },
-        { "image": "/img/nursery3.jpg", "alt": "" },
-        { "image": "/img/nursery4.jpg", "alt": "" }
+        {
+          "image": "/img/nursery1.jpg",
+          "alt": "Rows of labeled seedlings growing in the greenhouse"
+        },
+        {
+          "image": "/img/nursery2.jpg",
+          "alt": "Watering trays of vegetable and herb starts in the greenhouse"
+        },
+        {
+          "image": "/img/nursery3.jpg",
+          "alt": "Pots of lady's mantle in the nursery"
+        },
+        {
+          "image": "/img/nursery4.jpg",
+          "alt": "Trays of young seedlings with plant labels"
+        }
       ]
     }
   ]
