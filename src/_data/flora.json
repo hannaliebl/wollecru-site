@@ -1,0 +1,25 @@
+{
+  "title": "flora",
+  "parts": [
+    {
+      "heading": "Gardens",
+      "text": "Our perennial gardens are always expanding as we trial different plants that grow well in our Zone 4 region. Each season is a new experiment with form, texture, color and rhythm to design emotionally impactful gardens that are maintained with minimal fuss and absolutely no pesticides, fungicides, herbicides or chemical fertilizers. While we garden because we love what it adds to our lives, it is also a great way to inspire our customers by showcasing the plants that we grow for sale in our nursery.\n",
+      "photos": [
+        { "image": "/img/flowers-bricks.jpeg", "alt": "" },
+        { "image": "/img/gardens1.jpg", "alt": "" },
+        { "image": "/img/gardens2.jpg", "alt": "" },
+        { "image": "/img/gardens3.jpg", "alt": "" }
+      ]
+    },
+    {
+      "heading": "Nursery",
+      "text": "Wollecru has a seasonal nursery selling high quality annual vegetable and flower starts each spring. We also propagate our favorite garden perennials and sell them on open days in the spring, as well as by appointment throughout the growing season. All the plants are grown in living soil using compost based potting soil, or a blend of our own composted sheep manure, local sand, and garden soil.\n\nWe also provide contract growing each spring for professional gardeners as well as passionate home gardeners. If you are interested in sourcing locally grown plants for a project, or have any questions about how to get started with your garden adventures, please get in touch at [wollecru@gmail.com](mailto:wollecru@gmail.com)\n",
+      "photos": [
+        { "image": "/img/nursery1.jpg", "alt": "" },
+        { "image": "/img/nursery2.jpg", "alt": "" },
+        { "image": "/img/nursery3.jpg", "alt": "" },
+        { "image": "/img/nursery4.jpg", "alt": "" }
+      ]
+    }
+  ]
+}

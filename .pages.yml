@@ -1,0 +1,191 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+# This defines what editors see at app.pagescms.org. Every Save is a commit to
+# the branch they're editing, which Netlify deploys in about a minute.
+
+media:
+  input: src/img
+  output: /img
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    # Keep any keys the CMS doesn't know about.
+    merge: true
+  commit:
+    # Show the editor's name/email on commits, not just "Pages CMS".
+    identity: user
+    templates:
+      update: "Update {filename} (via Pages CMS, {userName})"
+      create: "Create {filename} (via Pages CMS, {userName})"
+      delete: "Delete {filename} (via Pages CMS, {userName})"
+
+content:
+  - name: site
+    label: Site settings
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - name: name
+        label: Name at the top
+        type: string
+        required: true
+      - name: pronunciation
+        label: Pronunciation
+        type: string
+      - name: tagline
+        label: Tagline
+        description: The sentence under the name at the top of the page.
+        type: text
+      - name: title
+        label: Browser tab and search title
+        description: Shown in the browser tab and as the headline in Google results.
+        type: text
+        required: true
+      - name: shop_url
+        label: Online store link
+        description: Used for "Shop" in the menu.
+        type: string
+        required: true
+        pattern:
+          regex: "^https://"
+          message: Must be a full web address starting with https://
+      - name: email
+        label: Contact email
+        description: Shown in the contact section.
+        type: string
+        required: true
+      - name: logo
+        label: Logo
+        type: image
+        required: true
+
+  - name: intro
+    label: Intro (Farming Healthy Soil)
+    type: file
+    path: src/_data/intro.json
+    format: json
+    fields:
+      - name: heading
+        label: Heading
+        type: string
+        required: true
+      - name: body
+        label: Text
+        type: rich-text
+        options: { format: markdown }
+
+  - name: wool
+    label: Wool section
+    type: file
+    path: src/_data/wool.json
+    format: json
+    fields:
+      - name: title
+        label: Big title on the photo
+        type: string
+        required: true
+      - name: parts
+        label: Parts
+        description: Each part is a heading and text, followed by photos. Drag to reorder.
+        type: object
+        list: true
+        # Reused by the Flora and Wine sections below (YAML anchor).
+        fields: &part_fields
+          - name: heading
+            label: Heading (optional)
+            type: string
+          - name: text
+            label: Text
+            type: rich-text
+            options: { format: markdown }
+          - name: photos
+            label: Photos
+            description: Shown full width under the text, in this order. Drag to reorder.
+            type: object
+            list: true
+            fields:
+              - name: image
+                label: Photo
+                description: Landscape photos at least 1600 pixels wide look best.
+                type: image
+                required: true
+              - name: alt
+                label: Photo description
+                description: Describe the photo in a few words. It's read aloud to people using screen readers.
+                type: string
+              # Legacy layout on two weaving photos; kept so they look the same.
+              - name: align_left
+                type: boolean
+                hidden: true
+
+  - name: flora
+    label: Flora section
+    type: file
+    path: src/_data/flora.json
+    format: json
+    fields:
+      - name: title
+        label: Big title on the photo
+        type: string
+        required: true
+      - name: parts
+        label: Parts
+        description: Each part is a heading and text, followed by photos. Drag to reorder.
+        type: object
+        list: true
+        fields: *part_fields
+
+  - name: wine
+    label: Wine section
+    type: file
+    path: src/_data/wine.json
+    format: json
+    fields:
+      - name: title
+        label: Big title on the photo
+        type: string
+        required: true
+      - name: parts
+        label: Parts
+        description: Each part is a heading and text, followed by photos. Drag to reorder.
+        type: object
+        list: true
+        fields: *part_fields
+
+  - name: contact
+    label: Contact and newsletter section
+    type: file
+    path: src/_data/contact.json
+    format: json
+    fields:
+      - name: title
+        label: Big title on the photo
+        type: string
+        required: true
+      - name: address
+        label: Names and address
+        description: Press Enter for each new line.
+        type: text
+      - name: instagram
+        label: Instagram handle
+        description: Without the @, e.g. kirstenliebl. Leave empty to hide.
+        type: string
+      - name: newsletter_text
+        label: Newsletter sign-up text
+        type: text
+      - name: newsletter_embed
+        label: Newsletter sign-up box link
+        description: The Substack embed address. Leave empty to hide the sign-up box.
+        type: string
+      - name: image
+        label: Photo at the bottom
+        type: image
+      - name: image_alt
+        label: Photo description
+        description: Read aloud to people using screen readers.
+        type: string
+      - name: credits
+        label: Photo credits
+        type: string

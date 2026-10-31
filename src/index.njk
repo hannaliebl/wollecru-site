@@ -1,0 +1,102 @@
+{#- The whole site is this one page. Content comes from src/_data/*.json,
+    which editors change in Pages CMS. Markup and class names match the
+    original hand-written index.html so styles.css applies unchanged. -#}
+{%- macro section(id, data, headerClass, titleClass) -%}
+    <header class="section-header {{ headerClass }}">
+      <div class="text-container">
+        <h1 id="{{ id }}" class="{{ titleClass }}">{{ data.title }}</h1>
+      </div>
+    </header>
+    <section class="text-container">
+      {%- for part in data.parts %}
+      {%- if part.heading or part.text %}
+      <div class="text-section">
+        {%- if part.heading %}
+        <h2>{{ part.heading }}</h2>
+        {%- endif %}
+        {{ part.text | markdown | safe }}
+      </div>
+      {%- endif %}
+      {%- for photo in part.photos %}
+      <div class="content-container-expanded{% if photo.align_left %} side-by-side-img-row{% endif %}">
+        <img class="img-responsive" src="{{ photo.image }}" alt="{{ photo.alt }}">
+      </div>
+      {%- endfor %}
+      {%- endfor %}
+    </section>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>{{ site.title }}</title>
+  <meta charset='utf-8'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <div class="text-container">
+      <div class="logo-container">
+        <img class="logo" src="{{ site.logo }}" />
+      </div>
+      </div>
+
+      <div class="title-text-container">
+        <h1 class="page-title">{{ site.name }}</h1>
+        <p class="title-subheading">{{ site.pronunciation }}</p>
+        <p class="title-subheading-small">{{ site.tagline }}</p>
+        <div class="logo-medium-container">
+          <img class="logo-medium" src="{{ site.logo }}" />
+        </div>
+      </div>
+      <nav class="text-container"><ul>
+        <li><a href="#wool">Wool</a></li>
+        <li><a href="#flora">Flora</a></li>
+        <li><a href="#wine">Wine</a></li>
+        <li><a href="{{ site.shop_url }}">Shop</a></li>
+        <li><a href="#contact">Contact and Newsletter</a></li>
+      </ul></nav>
+    </header>
+    <section class="text-container">
+      <h2>{{ intro.heading }}</h2>
+      {{ intro.body | markdown | safe }}
+    </section>
+{{ section("wool", wool, "wool-header", "section-title") }}
+{{ section("flora", flora, "flora-header", "section-title-left") }}
+{{ section("wine", wine, "wine-header", "section-title-left") }}
+    <header class="section-header contact-header">
+      <div class="text-container">
+        <h1 id="contact" class="section-title section-title-mod-contact">{{ contact.title }}</h1>
+      </div>
+    </header>
+    <section class="text-container text-center">
+      <div class="text-section">
+      <p>
+        {%- for line in contact.address | lines %}{{ line }}{% if not loop.last %}<br />
+        {% endif %}{% endfor -%}
+      </p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {%- set instagram = contact.instagram | replace("@", "") | trim %}
+      {%- if instagram %}
+      <p>Follow us on Instagram: <a href="https://instagram.com/{{ instagram }}">@{{ instagram }}</a></p>
+      {%- endif %}
+      <p>{{ contact.newsletter_text | markdownInline | safe }}</p>
+      {%- if contact.newsletter_embed %}
+      <iframe src="{{ contact.newsletter_embed }}" width="480" height="320"
+        style="border:1px solid #cfc8a0; background:#cfc8a0;" frameborder="0" scrolling="no"></iframe>
+      {%- endif %}
+      </div>
+      {%- if contact.image %}
+      <img class="img-responsive img-center" src="{{ contact.image }}" alt="{{ contact.image_alt }}">
+      {%- endif %}
+      {%- if contact.credits %}
+      <p>{{ contact.credits }}</p>
+      {%- endif %}
+    </section>
+  </div>
+</body>
+</html>
