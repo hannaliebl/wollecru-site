@@ -19,7 +19,7 @@
       {%- endif %}
       {%- for photo in part.photos %}
       <div class="content-container-expanded{% if photo.align_left %} side-by-side-img-row{% endif %}">
-        <img class="img-responsive" src="{{ photo.image }}" alt="{{ photo.alt }}">
+        <img class="img-responsive" src="{{ photo.image }}" alt="{{ photo.alt }}" sizes="(min-width: 1226px) 1220px, (min-width: 1000px) 960px, calc(100vw - 40px)">
       </div>
       {%- endfor %}
       {%- endfor %}
@@ -29,8 +29,46 @@
 <html lang='en'>
 
 <head>
-  <title>{{ site.title }}</title>
   <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ meta.url }}/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ meta.url }}/">
+  <meta property="og:image" content="{{ meta.url }}/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  {%- set instagram = contact.instagram | replace("@", "") | trim %}
+  {#- Business details for Google (https://schema.org/LocalBusiness). #}
+  <script type="application/ld+json">{{ {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": site.name | capitalize,
+    "description": site.description,
+    "url": meta.url + "/",
+    "email": site.email,
+    "image": meta.url + "/img/og-image.jpg",
+    "logo": meta.url + site.logo,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": contact.street,
+      "addressLocality": contact.city,
+      "addressRegion": contact.state,
+      "postalCode": contact.zip,
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      ("https://instagram.com/" + instagram) if instagram,
+      site.shop_url,
+      contact.newsletter_embed | replace("/embed", "") if contact.newsletter_embed
+    ] | select
+  } | jsonLd | safe }}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Lato:wght@300&display=swap" rel="stylesheet">
@@ -41,7 +79,7 @@
     <header class="page-header">
       <div class="text-container">
       <div class="logo-container">
-        <img class="logo" src="{{ site.logo }}" />
+        <img class="logo" src="{{ site.logo }}" alt="Wollecru logo" eleventy:ignore />
       </div>
       </div>
 
@@ -50,7 +88,7 @@
         <p class="title-subheading">{{ site.pronunciation }}</p>
         <p class="title-subheading-small">{{ site.tagline }}</p>
         <div class="logo-medium-container">
-          <img class="logo-medium" src="{{ site.logo }}" />
+          <img class="logo-medium" src="{{ site.logo }}" alt="Wollecru logo" eleventy:ignore />
         </div>
       </div>
       <nav class="text-container"><ul>
@@ -75,12 +113,10 @@
     </header>
     <section class="text-container text-center">
       <div class="text-section">
-      <p>
-        {%- for line in contact.address | lines %}{{ line }}{% if not loop.last %}<br />
-        {% endif %}{% endfor -%}
-      </p>
+      <p>{{ contact.names }}<br />
+        {{ contact.street }}<br />
+        {{ contact.city }}, {{ contact.state }} {{ contact.zip }}</p>
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      {%- set instagram = contact.instagram | replace("@", "") | trim %}
       {%- if instagram %}
       <p>Follow us on Instagram: <a href="https://instagram.com/{{ instagram }}">@{{ instagram }}</a></p>
       {%- endif %}
@@ -91,7 +127,7 @@
       {%- endif %}
       </div>
       {%- if contact.image %}
-      <img class="img-responsive img-center" src="{{ contact.image }}" alt="{{ contact.image_alt }}">
+      <img class="img-responsive img-center" src="{{ contact.image }}" alt="{{ contact.image_alt }}" sizes="(min-width: 1000px) 960px, calc(100vw - 40px)">
       {%- endif %}
       {%- if contact.credits %}
       <p>{{ contact.credits }}</p>
